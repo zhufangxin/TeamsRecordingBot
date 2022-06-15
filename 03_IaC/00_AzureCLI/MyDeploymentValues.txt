@@ -1,5 +1,5 @@
 botSubDomain=interviewintelligence.shl.com
 botName=myTeamsRecBot
 projectPrefix=interviewintelligence
-azureLocation=indiacentral
+azureLocation=centralindia
 acrName=interviewintelligenceacr
