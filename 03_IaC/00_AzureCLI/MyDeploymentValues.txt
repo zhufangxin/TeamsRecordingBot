@@ -1,5 +1,5 @@
-botSubDomain=probot.vsalis.eu
+botSubDomain=interviewintelligence.shl.com
 botName=myTeamsRecBot
-projectPrefix=porbot
-azureLocation=francecentral
-acrName=porbotacr
+projectPrefix=interviewintelligence
+azureLocation=indiacentral
+acrName=interviewintelligenceacr
