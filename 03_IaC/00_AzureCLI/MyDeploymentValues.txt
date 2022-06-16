@@ -1,5 +1,5 @@
-botSubDomain=interviewintelligence.shl.com
-botName=myTeamsRecBot
-projectPrefix=interviewintelligence
+botSubDomain=interviewintl.nikheel.tech
+botName=myInterviewintl
+projectPrefix=interviewintl
 azureLocation=centralindia
-acrName=interviewintelligenceacr
+acrName=interviewintlacr
