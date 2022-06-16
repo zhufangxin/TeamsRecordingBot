@@ -1,5 +1,6 @@
 botSubDomain=interviewintl.nikheel.tech
 botName=myInterviewintl
 projectPrefix=interviewintl
-azureLocation=centralindia
+azureLocation=francecentral
 acrName=interviewintlacr
+
