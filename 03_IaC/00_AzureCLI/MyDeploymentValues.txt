@@ -1,4 +1,4 @@
-botSubDomain=interviewintl.nikheel.tech
+botSubDomain=interviewbot.nikheel.tech
 botName=myInterviewintl
 projectPrefix=interviewintl
 azureLocation=francecentral
