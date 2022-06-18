@@ -14,5 +14,5 @@ export class CallEntity {
 
 export class LanguageEntity {
     key: string;
-    text: string;    
+    text: string;
 }

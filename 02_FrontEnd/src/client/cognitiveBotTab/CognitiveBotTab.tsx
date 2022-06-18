@@ -14,13 +14,13 @@ import InviteBot from "../modules/InviteBot";
  */
 export const CognitiveBotTab = () => {
 
-    const [{ inTeams, theme, context }] = useTeams();    
-    const [currentCallId, setcurrentCallId] = useState<string>();    
+    const [{ inTeams, theme, context }] = useTeams();
+    const [currentCallId, setcurrentCallId] = useState<string>();
     const [inMeeting, setinMeeting] = useState<boolean>();
-    const [currentJoinUrl, setcurrentJoinUrl] = useState<string>();    
+    const [currentJoinUrl, setcurrentJoinUrl] = useState<string>();
 
     useEffect(() => {
-        if (inTeams === true) {
+        if(inTeams === true) {
             microsoftTeams.appInitialization.notifySuccess();
 
             // Get Join Meeting Url
@@ -31,7 +31,7 @@ export const CognitiveBotTab = () => {
                 setinMeeting(true);
 
                 // Try to create Join Url
-                let lJoinUrl = "https://teams.microsoft.com/l/meetup-join/CHAT_ID/0?context={\"Tid\":\"T_ID\",\"Oid\":\"O_ID\"}".
+                const lJoinUrl = "https://teams.microsoft.com/l/meetup-join/CHAT_ID/0?context={\"Tid\":\"T_ID\",\"Oid\":\"O_ID\"}".
                 replace("CHAT_ID", context.chatId).
                 replace("T_ID", context.tid).
                 replace("O_ID", context.userObjectId);
@@ -42,7 +42,7 @@ export const CognitiveBotTab = () => {
             }
 
         }
-    }, [inTeams]);     
+    }, [inTeams]);
 
     /**
      * The render() method to create the UI of the tab
@@ -52,12 +52,12 @@ export const CognitiveBotTab = () => {
             <Provider theme={theme}>
                 <Flex column fill={true}>
 
-                    {inMeeting && !currentCallId ?                        
+                    {inMeeting && !currentCallId ?
                         ( <InviteBot currentJoinUrl={currentJoinUrl} setcurrentCallId={setcurrentCallId}  />) :
                         (null)
                     }
 
-                    {!inMeeting ? 
+                    {!inMeeting ?
                         (<MyCalls setcurrentCallId={setcurrentCallId} />) :
                         (null)
                     }
@@ -65,6 +65,6 @@ export const CognitiveBotTab = () => {
                     <MyTranscriptions currentCallId={currentCallId} />
                 </Flex>
             </Provider>
-        </AppInsightsContext.Provider>        
+        </AppInsightsContext.Provider>
     );
 };
