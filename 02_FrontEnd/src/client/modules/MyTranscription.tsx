@@ -3,7 +3,7 @@ import { Flex, Avatar, Card, CardHeader, CardBody, Text } from "@fluentui/react-
 import * as PropTypes from "prop-types";
 import { TranscriptionEntity } from "../Models/ModelEntities";
 
-const MyTranscription = (props) =>{
+const MyTranscription = (props) => {
     console.log(props);
     return (
         <Card fluid selected>
