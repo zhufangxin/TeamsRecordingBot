@@ -1,9 +1,9 @@
 export class TranscriptionEntity {
-    public id: string;
-    public who: string;
-    public text: string;
-    public translations: string;
-    public when: string;
+    id: string;
+    who: string;
+    text: string;
+    translations: string;
+    when: string;
 }
 
 export class CallEntity {
