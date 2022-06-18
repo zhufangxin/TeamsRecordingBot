@@ -1,6 +1,6 @@
-botSubDomain=interviewbtt.nikheel.tech
-botName=myInterviewin
-projectPrefix=interviewin
-azureLocation=centralus
-acrName=interviewinacr
+botSubDomain=probot.nikheel.tech
+botName=probot
+projectPrefix=probot
+azureLocation=centralindia
+acrName=probotacr
 
