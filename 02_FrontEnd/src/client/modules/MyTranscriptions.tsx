@@ -5,8 +5,7 @@ import * as PropTypes from "prop-types";
 import { TranscriptionEntity } from "../Models/ModelEntities";
 import { useState, useEffect } from "react";
 
-const MyTranscriptions = (props) =>
-{
+const MyTranscriptions = (props) => {
     const [myTranscriptions, setMyTranscriptions] = useState<TranscriptionEntity[]>();
 
     useEffect(() => {
@@ -47,8 +46,6 @@ const MyTranscriptions = (props) =>
 };
 
 
-MyTranscriptions.propTypes = {
-    currentCallId: PropTypes.string    
-};
+MyTranscriptions.propTypes = { currentCallId: PropTypes.string };
 
 export default MyTranscriptions;
