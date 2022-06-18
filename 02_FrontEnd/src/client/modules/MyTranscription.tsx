@@ -7,7 +7,7 @@ const MyTranscription = (props) => (
     <Card fluid selected>
         <CardHeader>
             <Flex gap= "gap.small" >
-                <Avatar name={props.transcription.who}/>
+                <Avatar name={props.transcripion.who}/>
                 <Flex column>
                     <Text content={props.transcription.who} weight= "bold" />
                     <Text content={new Date(Date.parse(props.transcription.when)).toLocaleString()} size= "small" />

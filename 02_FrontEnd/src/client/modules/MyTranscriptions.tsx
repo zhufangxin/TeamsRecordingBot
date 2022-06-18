@@ -45,7 +45,6 @@ const MyTranscriptions = (props) => {
     );
 };
 
-
 MyTranscriptions.propTypes = { currentCallId: PropTypes.string };
 
 export default MyTranscriptions;

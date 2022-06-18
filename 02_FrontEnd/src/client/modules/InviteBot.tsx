@@ -13,8 +13,8 @@ const InviteBot = (props) => {
 
         if (currentTranscriptionLang && currentTranslationLang){
             let lEndPoint = process.env.REACT_APP_BACKEND_API as string;
-            lEndPoint = lEndPoint + "api/InviteBot" ;
-            const lBody = {JoinURL: props.currentJoinUrl ? encodeURI(props.currentJoinUrl) : "", TranscriptionLanguage: currentTranscriptionLang, TranslationLanguages: [currentTranslationLang]};
+            lEndPoint = lEndPoint + "api/InviteBot";
+            const lBody = {JoinURL: props.currentJoinUrl ? encodeURI(props.currentJoinUrl) : "" , TranscriptionLanguage: currentTranscriptionLang, TranslationLanguages: [currentTranslationLang]};
             console.log("Got invite bot endpoint: " + lEndPoint + ". Body is: " + JSON.stringify(lBody));
             fetch(lEndPoint, {
                 method: "POST",
@@ -46,7 +46,7 @@ const InviteBot = (props) => {
     return (
         <Flex column gap= "gap.small" >
             <LanguageSelection
-                setLangSelection={setcurrentTranscriptionLang}
+                setLangSelection= {setcurrentTranscriptionLang}
                 languages = {myLanguages}
                 label= "Transcription language"
             />
@@ -57,7 +57,7 @@ const InviteBot = (props) => {
             />
 
             <button
-                onClick={inviteBot}>Invite my Bot</button>
+                onClick= {inviteBot}>Invite my Bot</button>
         </Flex>
 
     );
