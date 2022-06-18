@@ -14,12 +14,12 @@ const InviteBot = (props) => {
         if (currentTranscriptionLang && currentTranslationLang){
             let lEndPoint = process.env.REACT_APP_BACKEND_API as string;
             lEndPoint = lEndPoint + "api/InviteBot" ;
-            const lBody = {JoinURL: props.currentJoinUrl ? encodeURI(props.currentJoinUrl) : "" , TranscriptionLanguage: currentTranscriptionLang, TranslationLanguages: [currentTranslationLang]};
+            const lBody = {JoinURL: props.currentJoinUrl ? encodeURI(props.currentJoinUrl) : "", TranscriptionLanguage: currentTranscriptionLang, TranslationLanguages: [currentTranslationLang]};
             console.log("Got invite bot endpoint: " + lEndPoint + ". Body is: " + JSON.stringify(lBody));
             fetch(lEndPoint, {
                 method: "POST",
                 headers: {
-                    Accept: "application/json" ,
+                    Accept: "application/json",
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(lBody)

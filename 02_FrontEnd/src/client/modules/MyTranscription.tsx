@@ -9,8 +9,8 @@ const MyTranscription = (props) => (
             <Flex gap= "gap.small" >
                 <Avatar name={props.transcription.who}/>
                 <Flex column>
-                    <Text content={props.transcription.who} weight="bold" />
-                    <Text content={new Date(Date.parse(props.transcription.when)).toLocaleString()} size="small" />
+                    <Text content={props.transcription.who} weight= "bold" />
+                    <Text content={new Date(Date.parse(props.transcription.when)).toLocaleString()} size= "small" />
                 </Flex>
             </Flex>
         </CardHeader>
