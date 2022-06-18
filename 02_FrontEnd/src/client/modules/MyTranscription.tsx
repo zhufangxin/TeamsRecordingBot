@@ -16,8 +16,8 @@ const MyTranscription = (props) => {
                     </Flex>
                 </Flex>
             </CardHeader>
-            <CardBody>"Bot"
-                <b>Translation:</b>"Bot"
+            <CardBody>Bot
+                <b>Translation:</b>Bot
             </CardBody>
         </Card>
     );
