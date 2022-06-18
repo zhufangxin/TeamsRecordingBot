@@ -2,7 +2,6 @@ import * as React from "react";
 import { Flex, Avatar, Card, CardHeader, CardBody, Text } from "@fluentui/react-northstar";
 import * as PropTypes from "prop-types";
 import { TranscriptionEntity } from "../Models/ModelEntities";
-
 const MyTranscription = (props) => {
     console.log(props);
     return (
@@ -24,6 +23,6 @@ const MyTranscription = (props) => {
 };
 
 MyTranscription.propTypes = {
-    transcription: PropTypes.arrayOf(PropTypes.instanceOf(TranscriptionEntity))
+    transcription: TranscriptionEntity
 };
 export default MyTranscription;
