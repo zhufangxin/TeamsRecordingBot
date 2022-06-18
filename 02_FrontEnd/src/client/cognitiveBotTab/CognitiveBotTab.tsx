@@ -46,7 +46,7 @@ export const CognitiveBotTab = () => {
         <AppInsightsContext.Provider value={reactPlugin}>
             <Provider theme={theme}>
                 <Flex column fill={true}>
-                    {inMeeting && !currentCallId ? ( <InviteBot currentJoinUrl={currentJoinUrl} setcurrentCallId={setcurrentCallId} />): (null)}
+                    {inMeeting && !currentCallId ? ( <InviteBot currentJoinUrl={currentJoinUrl} setcurrentCallId={setcurrentCallId} />) : (null)}
                     {!inMeeting ? (<MyCalls setcurrentCallId={setcurrentCallId} />) : (null)}
                     <MyTranscriptions currentCallId={currentCallId} />
                 </Flex>

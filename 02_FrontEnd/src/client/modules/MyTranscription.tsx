@@ -6,7 +6,7 @@ import { TranscriptionEntity } from "../Models/ModelEntities";
 const MyTranscription = (props) => (
     <Card fluid selected>
         <CardHeader>
-            <Flex gap="gap.small">
+            <Flex gap= "gap.small" >
                 <Avatar name={props.transcription.who}/>
                 <Flex column>
                     <Text content={props.transcription.who} weight="bold" />

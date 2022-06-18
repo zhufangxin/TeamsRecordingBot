@@ -5,8 +5,7 @@ import { Flex } from "@fluentui/react-northstar";
 import LanguageSelection from "./LanguageSelection";
 import { useState, useEffect } from "react";
 
-const InviteBot = (props) =>
-{
+const InviteBot = (props) => {
     const [currentTranscriptionLang, setcurrentTranscriptionLang] = useState<string>();
     const [currentTranslationLang, setcurrentTranslationLang] = useState<string>();
 
@@ -45,16 +44,16 @@ const InviteBot = (props) =>
     ];
 
     return (
-        <Flex column gap="gap.small" >
+        <Flex column gap= "gap.small" >
             <LanguageSelection
                 setLangSelection={setcurrentTranscriptionLang}
                 languages = {myLanguages}
-                label="Transcription language"
+                label= "Transcription language"
             />
             <LanguageSelection
                 setLangSelection={setcurrentTranslationLang}
                 languages = {myLanguages}
-                label="Translation language"
+                label= "Translation language"
             />
 
             <button
