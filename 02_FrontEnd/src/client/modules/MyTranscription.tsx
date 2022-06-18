@@ -8,15 +8,15 @@ const MyTranscription = (props) => {
         <Card fluid selected>
             <CardHeader>
                 <Flex gap= "gap.small" >
-                    <Avatar name={props.transcripion}/>
+                    <Avatar name={props.ranscripion}/>
                     <Flex column>
-                        <Text content={props.transcription} weight= "bold" />
-                        <Text content={new Date(Date.parse(props.transcription.when)).toLocaleString()} size= "small" />
+                        <Text content={props.ranscription} weight= "bold" />
+                        <Text content={new Date(Date.parse(props.ranscription.when)).toLocaleString()} size= "small" />
                     </Flex>
                 </Flex>
             </CardHeader>
-            <CardBody>{props.transcription.text}
-                <b>Translation:</b>{props.transcription.translations}
+            <CardBody>{props.ranscription.text}
+                <b>Translation:</b>{props.ranscription.translations}
             </CardBody>
         </Card>
     );
@@ -24,6 +24,6 @@ const MyTranscription = (props) => {
 
 MyTranscription.propTypes = {
     label: PropTypes.string,
-    transcription: TranscriptionEntity
+    ranscription: TranscriptionEntity
 };
 export default MyTranscription;
