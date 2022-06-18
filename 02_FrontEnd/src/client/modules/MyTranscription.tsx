@@ -23,6 +23,7 @@ const MyTranscription = (props) => {
 };
 
 MyTranscription.propTypes = {
+    label: PropTypes.string,
     transcription: TranscriptionEntity
 };
 export default MyTranscription;
