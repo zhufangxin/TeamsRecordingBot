@@ -1,6 +1,6 @@
 botSubDomain=interviewbtt.nikheel.tech
 botName=myInterviewint
 projectPrefix=interviewint
-azureLocation=westus
+azureLocation=centralus
 acrName=interviewintacr
 
