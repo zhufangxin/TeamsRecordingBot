@@ -20,7 +20,5 @@ const MyTranscription = (props) => (
     </Card>
 );
 
-MyTranscription.propTypes = { transcription: PropTypes.arrayOf(PropTypes.instanceOf(TranscriptionEntity))
-};
-
+MyTranscription.propTypes = { transcription: PropTypes.arrayOf(PropTypes.instanceOf(TranscriptionEntity)) };
 export default MyTranscription;
