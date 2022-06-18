@@ -20,21 +20,16 @@ export const CognitiveBotTab = () => {
     const [currentJoinUrl, setcurrentJoinUrl] = useState<string>();
 
     useEffect(() => {
-        if(inTeams === true) {
+        if (inTeams === true) {
             microsoftTeams.appInitialization.notifySuccess();
 
             // Get Join Meeting Url
-            if(context && context.meetingId && context.chatId && context.tid && context.userObjectId)
-            {
+            if (context && context.meetingId && context.chatId && context.tid && context.userObjectId) {
                 console.log("In Teams Meeting, meeting id is: " + context.meetingId);
                 console.log("Context is: " + JSON.stringify(context));
                 setinMeeting(true);
-
                 // Try to create Join Url
-                const lJoinUrl = "https://teams.microsoft.com/l/meetup-join/CHAT_ID/0?context={\"Tid\":\"T_ID\",\"Oid\":\"O_ID\"}".
-                replace("CHAT_ID", context.chatId).
-                replace("T_ID", context.tid).
-                replace("O_ID", context.userObjectId);
+                const lJoinUrl = "https://teams.microsoft.com/l/meetup-join/CHAT_ID/0?context={\"Tid\":\"T_ID\",\"Oid\":\"O_ID\"}".replace("CHAT_ID", context.chatId).replace("T_ID", context.tid).replace("O_ID", context.userObjectId);
 
                 console.log("Join web url is: " + lJoinUrl);
 
@@ -52,14 +47,14 @@ export const CognitiveBotTab = () => {
             <Provider theme={theme}>
                 <Flex column fill={true}>
 
-                    {inMeeting && !currentCallId ?
-                        ( <InviteBot currentJoinUrl={currentJoinUrl} setcurrentCallId={setcurrentCallId}  />) :
-                        (null)
+                    {inMeeting && !currentCallId
+                    ? ( <InviteBot currentJoinUrl={currentJoinUrl} setcurrentCallId={setcurrentCallId} />)
+                    : (null)
                     }
 
-                    {!inMeeting ?
-                        (<MyCalls setcurrentCallId={setcurrentCallId} />) :
-                        (null)
+                    {!inMeeting
+                    ? (<MyCalls setcurrentCallId={setcurrentCallId} />)
+                    : (null)
                     }
 
                     <MyTranscriptions currentCallId={currentCallId} />

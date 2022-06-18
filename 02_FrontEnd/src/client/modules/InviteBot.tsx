@@ -12,15 +12,11 @@ const InviteBot = (props) =>
 
     const inviteBot = () => {
 
-        if(currentTranscriptionLang && currentTranslationLang){
+        if (currentTranscriptionLang && currentTranslationLang){
             let lEndPoint = process.env.REACT_APP_BACKEND_API as string;
             lEndPoint = lEndPoint + "api/InviteBot";
-
-            const lBody = {JoinURL: props.currentJoinUrl ? encodeURI(props.currentJoinUrl) : "",TranscriptionLanguage: currentTranscriptionLang,TranslationLanguages: [currentTranslationLang]
-                        };
-
+            const lBody = {JoinURL: props.currentJoinUrl ? encodeURI(props.currentJoinUrl) : "",TranscriptionLanguage: currentTranscriptionLang,TranslationLanguages: [currentTranslationLang]};
             console.log("Got invite bot endpoint: " + lEndPoint + ". Body is: " + JSON.stringify(lBody));
-
             fetch(lEndPoint, {
                 method: "POST",
                 headers: {
@@ -40,13 +36,13 @@ const InviteBot = (props) =>
     };
 
     const myLanguages: LanguageEntity[] = [
-        { key: "en-US", text: "English"},
-        { key: "el-GR", text: "Greek"},
-        { key: "pl-PL", text: "Polish"},
-        { key: "ru-RU", text: "Russian"},
-        { key: "sl-SI", text: "Slovenian"},
-        { key: "sk-SK", text: "Slovak"}
-      ];
+        { key: "en-US" , text: "English" },
+        { key: "el-GR" , text: "Greek" },
+        { key: "pl-PL" , text: "Polish" },
+        { key: "ru-RU" , text: "Russian" },
+        { key: "sl-SI" , text: "Slovenian" },
+        { key: "sk-SK" , text: "Slovak" }
+    ];
 
     return (
         <Flex column gap="gap.small">

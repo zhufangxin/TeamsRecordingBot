@@ -4,7 +4,7 @@ import * as PropTypes from "prop-types";
 import { CallEntity } from "../Models/ModelEntities";
 import { useState, useEffect } from "react";
 
-const MyCalls = (props) =>{
+const MyCalls = (props) => {
     const [myActiveCalls, setActiveCalls] = useState<CallEntity[]>();
 
     const callIdChanged = (event: React.FormEvent<HTMLDivElement>, option?: IDropdownOption<CallEntity>, index?: number) => {
@@ -46,5 +46,4 @@ const MyCalls = (props) =>{
 MyCalls.propTypes = {
     setcurrentCallId: PropTypes.func
 };
-
 export default MyCalls;
