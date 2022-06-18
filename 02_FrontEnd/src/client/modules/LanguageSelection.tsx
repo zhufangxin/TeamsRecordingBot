@@ -3,17 +3,15 @@ import * as PropTypes from "prop-types";
 import { Dropdown, IDropdownOption } from "@fluentui/react";
 import { LanguageEntity } from "../Models/ModelEntities";
 
-const LanguageSelection = (props) =>
-{  
+const LanguageSelection = (props) =>{
     const langChanged = (event: React.FormEvent<HTMLDivElement>, option?: IDropdownOption<LanguageEntity>, index?: number) => {
-        if (option) {            
+        if (option) {
             props.setLangSelection(option.key);
         }
     };
 
     return (
-        
-        <Dropdown            
+        <Dropdown
             onChange={langChanged}
             options={props.languages}
             placeholder={props.label}

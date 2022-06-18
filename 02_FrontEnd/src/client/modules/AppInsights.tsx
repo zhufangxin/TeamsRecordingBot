@@ -1,8 +1,8 @@
-import { ApplicationInsights, DistributedTracingModes } from '@microsoft/applicationinsights-web';
-import { ReactPlugin } from '@microsoft/applicationinsights-react-js';
-import { createBrowserHistory } from 'history';
+import { ApplicationInsights, DistributedTracingModes } from "@microsoft/applicationinsights-web";
+import { ReactPlugin } from "@microsoft/applicationinsights-react-js";
+import { createBrowserHistory } from "history";
 
-const browserHistory = createBrowserHistory({ basename: '' });
+const browserHistory = createBrowserHistory({ basename: ""});
 const reactPlugin = new ReactPlugin();
 const appInsights = new ApplicationInsights({
     config: {
@@ -12,7 +12,7 @@ const appInsights = new ApplicationInsights({
         disableFetchTracking: false,
         enableCorsCorrelation: true,
         extensionConfig: {
-          [reactPlugin.identifier]: { history: browserHistory }
+            [reactPlugin.identifier]: { history: browserHistory }
         }
     }
 });

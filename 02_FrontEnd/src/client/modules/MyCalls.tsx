@@ -1,13 +1,11 @@
 import * as React from "react";
-import { Dropdown } from "@fluentui/react";
+import { Dropdown, IDropdownOption } from "@fluentui/react";
 import * as PropTypes from "prop-types";
 import { CallEntity } from "../Models/ModelEntities";
 import { useState, useEffect } from "react";
-import { IDropdownOption } from "@fluentui/react";
 
-const MyCalls = (props) =>
-{ 
-    const [myActiveCalls, setActiveCalls] = useState<CallEntity[]>();    
+const MyCalls = (props) =>{
+    const [myActiveCalls, setActiveCalls] = useState<CallEntity[]>();
 
     const callIdChanged = (event: React.FormEvent<HTMLDivElement>, option?: IDropdownOption<CallEntity>, index?: number) => {
         if (option) {
@@ -34,7 +32,7 @@ const MyCalls = (props) =>
             }).catch(function(error) {
                 console.log(error);
             });
-    }, []);    
+    }, []);
 
     return (
         <Dropdown
@@ -45,7 +43,7 @@ const MyCalls = (props) =>
     );
 };
 
-MyCalls.propTypes = {    
+MyCalls.propTypes = {
     setcurrentCallId: PropTypes.func
 };
 

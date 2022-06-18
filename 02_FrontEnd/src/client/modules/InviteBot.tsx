@@ -7,24 +7,20 @@ import { useState, useEffect } from "react";
 
 const InviteBot = (props) =>
 {
-    const [currentTranscriptionLang, setcurrentTranscriptionLang] = useState<string>();    
-    const [currentTranslationLang, setcurrentTranslationLang] = useState<string>();    
+    const [currentTranscriptionLang, setcurrentTranscriptionLang] = useState<string>();
+    const [currentTranslationLang, setcurrentTranslationLang] = useState<string>();
 
     const inviteBot = () => {
 
-        if(currentTranscriptionLang && currentTranslationLang)
-        {
+        if(currentTranscriptionLang && currentTranslationLang){
             let lEndPoint = process.env.REACT_APP_BACKEND_API as string;
             lEndPoint = lEndPoint + "api/InviteBot";
-            
-            let lBody = {
-                            JoinURL: props.currentJoinUrl ? encodeURI(props.currentJoinUrl) : "",
-                            TranscriptionLanguage: currentTranscriptionLang,
-                            TranslationLanguages: [currentTranslationLang]
+
+            const lBody = {JoinURL: props.currentJoinUrl ? encodeURI(props.currentJoinUrl) : "",TranscriptionLanguage: currentTranscriptionLang,TranslationLanguages: [currentTranslationLang]
                         };
-    
+
             console.log("Got invite bot endpoint: " + lEndPoint + ". Body is: " + JSON.stringify(lBody));
-    
+
             fetch(lEndPoint, {
                 method: "POST",
                 headers: {
@@ -40,27 +36,27 @@ const InviteBot = (props) =>
                 }).catch(function(error) {
                     console.log(error);
                 });
-        }        
+        }
     };
 
-    const myLanguages: LanguageEntity[] = [        
-        { key: 'en-US', text: 'English' },
-        { key: 'el-GR', text: 'Greek' },   
-        { key: 'pl-PL', text: 'Polish' },
-        { key: 'ru-RU', text: 'Russian' },
-        { key: 'sl-SI', text: 'Slovenian' },
-        { key: 'sk-SK', text: 'Slovak' }
+    const myLanguages: LanguageEntity[] = [
+        { key: "en-US", text: "English"},
+        { key: "el-GR", text: "Greek"},
+        { key: "pl-PL", text: "Polish"},
+        { key: "ru-RU", text: "Russian"},
+        { key: "sl-SI", text: "Slovenian"},
+        { key: "sk-SK", text: "Slovak"}
       ];
 
     return (
         <Flex column gap="gap.small">
-            <LanguageSelection                
+            <LanguageSelection
                 setLangSelection={setcurrentTranscriptionLang}
                 languages = {myLanguages}
                 label="Transcription language"
             />
-            <LanguageSelection          
-                setLangSelection={setcurrentTranslationLang}      
+            <LanguageSelection
+                setLangSelection={setcurrentTranslationLang}
                 languages = {myLanguages}
                 label="Translation language"
             />
@@ -68,13 +64,13 @@ const InviteBot = (props) =>
             <button
                 onClick={inviteBot}>Invite my Bot</button>
         </Flex>
-        
+
     );
 };
 
 InviteBot.propTypes = {
     currentJoinUrl: PropTypes.string,
-    setcurrentCallId: PropTypes.func    
+    setcurrentCallId: PropTypes.func
 };
 
 export default InviteBot;
