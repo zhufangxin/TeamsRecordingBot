@@ -21,6 +21,6 @@ const MyTranscription = (props) => (
 );
 
 MyTranscription.propTypes = { transcription: PropTypes.arrayOf(PropTypes.instanceOf(TranscriptionEntity))
-}; };
+};
 
 export default MyTranscription;
