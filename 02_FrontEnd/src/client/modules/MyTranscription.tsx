@@ -8,22 +8,22 @@ const MyTranscription = (props) => {
         <Card fluid selected>
             <CardHeader>
                 <Flex gap= "gap.small" >
-                    <Avatar name={props.ranscripion}/>
+                    {/* <Avatar name={props.transcripion}/> */}
+                    <Avatar name= "Bot"/>
                     <Flex column>
-                        <Text content={props.ranscription} weight= "bold" />
-                        <Text content={new Date(Date.parse(props.ranscription.when)).toLocaleString()} size= "small" />
+                        <Text content= "Bot" weight= "bold" />
+                        <Text content= "Today" size= "small" />
                     </Flex>
                 </Flex>
             </CardHeader>
-            <CardBody>{props.ranscription.text}
-                <b>Translation:</b>{props.ranscription.translations}
+            <CardBody>"Bot"
+                <b>Translation:</b>"Bot"
             </CardBody>
         </Card>
     );
 };
 
 MyTranscription.propTypes = {
-    label: PropTypes.string,
-    ranscription: TranscriptionEntity
+    transcription: TranscriptionEntity
 };
 export default MyTranscription;
