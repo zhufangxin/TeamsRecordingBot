@@ -55,5 +55,7 @@ namespace RecordingBot.Services.Util
         /// </summary>
         [JsonProperty(PropertyName = "translations")]
         public string Translations { get; set; }
+
+
     }
 }
