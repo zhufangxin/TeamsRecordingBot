@@ -1,6 +1,6 @@
-botSubDomain=probot.nikheel.tech
-botName=probot
-projectPrefix=probot
-azureLocation=centralindia
-acrName=probotacr
+botSubDomain=nikheelbt.nikheel.works
+botName=nikheelbt
+projectPrefix=nikheelbt
+azureLocation=centralus
+acrName=nikheelbtacr
 
