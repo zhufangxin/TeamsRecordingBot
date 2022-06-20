@@ -1,6 +1,6 @@
-botSubDomain=nikheelbt.nikheel.works
-botName=nikheelbt
-projectPrefix=nikheelbt
-azureLocation=centralus
-acrName=nikheelbtacr
+botSubDomain=nikheelbot.nikheel.works
+botName=nikheelbot
+projectPrefix=nikheelbot
+azureLocation=eastus
+acrName=nikheelbotacr
 

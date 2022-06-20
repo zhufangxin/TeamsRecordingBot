@@ -17,7 +17,7 @@ Write-Output "(Got from ENV): RG: $resourceGroupName, MC rg: $AKSmgResourceGroup
 Write-Output "Environment Azure CL: $(az --version)"
 
 # Create the resource group
-Write-Output "About to create resource group: $resourceGroupName" 
+Write-Output "About to create resource group: $resourceGroupName"
 az group create -l $azureLocation -n $resourceGroupName
 
 # Create Application Insights for the recording bot
@@ -29,8 +29,8 @@ Write-Output "Got app insights key: $appInsightsKey"
 
 
 # Create the AKS Cluster
-Write-Output "About to create AKS cluster: $resourceGroupName" 
-az aks create --resource-group $resourceGroupName --name $AKSClusterName --node-count 1 --enable-addons monitoring --generate-ssh-keys --windows-admin-password $PASSWORD_WIN --windows-admin-username azureuser --vm-set-type VirtualMachineScaleSets --network-plugin azure --service-principal $env:SP_ID --client-secret $env:SP_SECRET
+Write-Output "About to create AKS cluster: $resourceGroupName"
+az aks create --resource-group $resourceGroupName --name $AKSClusterName --node-count 2 --enable-addons monitoring --generate-ssh-keys --windows-admin-password $PASSWORD_WIN --windows-admin-username azureuser --vm-set-type VirtualMachineScaleSets --network-plugin azure --service-principal $env:SP_ID --client-secret $env:SP_SECRET
 
 # Add the Windows Node pool
 Write-Output "About to create AKS windows pool: $resourceGroupName"
@@ -43,7 +43,7 @@ az acr create --resource-group $resourceGroupName --name $acrName --sku Basic --
 Write-Output "Updating AKS cluster with ACR"
 az aks update -n $AKSClusterName -g $resourceGroupName --attach-acr $acrName
 
-# Move the Public IP address to MC_ resource group. 
+# Move the Public IP address to MC_ resource group.
 # This is needed in order for the load balancer to get assigned with the Public IP, otherwise you might end up in a "pending" state.
 Write-Output "Move Public IP resource to MC_ resource group"
 $publicIpAddressId = az network public-ip show --resource-group $resourceGroupName --name $publicIpName --query 'id'
@@ -119,15 +119,15 @@ Start-Sleep -Seconds 300
 
 $certValidation = kubectl get cert -n teams-recording-bot
 
-if ($certValidation -like '*True*') 
+if ($certValidation -like '*True*')
 {
     Write-Output "Certification Validation valid...Yiipiiiii..."
 }
-else 
+else
 {
     Write-Output "Certification Validation failed..."
     Write-Output "it might need some more time, or something went wrong..."
     Write-Output "try manually executing: kubectl get cert -n teams-recording-bot in a few minutes."
     Write-Output "if this doesn't work check your A record settings..."
-    exit -1    
+    exit -1
 }
