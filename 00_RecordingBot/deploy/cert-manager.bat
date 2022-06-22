@@ -11,7 +11,7 @@ echo Installing cert-manager
 helm install ^
   cert-manager jetstack/cert-manager ^
   --namespace cert-manager ^
-  --version v0.15.1 ^
+  --version v1.5.3 ^
   --set nodeSelector."beta\.kubernetes\.io/os"=linux ^
   --set webhook.nodeSelector."beta\.kubernetes\.io/os"=linux ^
   --set cainjector.nodeSelector."beta\.kubernetes\.io/os"=linux ^

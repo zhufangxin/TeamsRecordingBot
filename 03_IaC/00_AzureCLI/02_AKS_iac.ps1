@@ -73,7 +73,7 @@ helm repo add jetstack https://charts.jetstack.io
 helm repo update
 
 Write-Output "Installing cert-manager"
-helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v0.15.1 --set nodeSelector."beta\.kubernetes\.io/os"=linux --set webhook.nodeSelector."beta\.kubernetes\.io/os"=linux --set cainjector.nodeSelector."beta\.kubernetes\.io/os"=linux --set installCRDs=true
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.8.0 --set nodeSelector."beta\.kubernetes\.io/os"=linux --set webhook.nodeSelector."beta\.kubernetes\.io/os"=linux --set cainjector.nodeSelector."beta\.kubernetes\.io/os"=linux --set installCRDs=true
 
 Write-Output "Waiting for cert-manager to be ready"
 kubectl wait pod -n cert-manager --for condition=ready --timeout=60s --all
