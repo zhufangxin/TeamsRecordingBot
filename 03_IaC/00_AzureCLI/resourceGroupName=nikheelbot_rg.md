@@ -1,5 +1,5 @@
-resourceGroupName=intrvbot_rg
-AKSmgResourceGroup=MC_intrvbot_rg_recBotAKSCluster_eastus
+resourceGroupName=intrrvbot_rg
+AKSmgResourceGroup=MC_intrrvbot_rg_recBotAKSCluster_eastus
 botSubDomain=intrbot.nikheel.works
 azureLocation=eastus
 projectPrefix=intrvbot
@@ -12,3 +12,10 @@ publicIpName="myRecBotPublicIP"
 acrName=intrvbotacr
 set +H
 PASSWORD_WIN="AbcABC123!@#123456"
+
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.5.3 --set nodeSelector."beta\.kubernetes\.io/os"=linux --set webhook.nodeSelector."beta\.kubernetes\.io/os"=linux --set cainjector.nodeSelector."beta\.kubernetes\.io/os"=linux --set installCRDs=true
+
+
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.5.3 --set nodeSelector."kubernetes\.io/os"=linux --set webhook.nodeSelector."kubernetes\.io/os"=linux --set cainjector.nodeSelector."kubernetes\.io/os"=linux --set startupapicheck.timeout=5m --set installCRDs=true
+
+https://github.com/cert-manager/cert-manager/issues/4646
