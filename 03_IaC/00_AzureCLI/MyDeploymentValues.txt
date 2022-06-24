@@ -1,6 +1,6 @@
-botSubDomain=intrvwbt.nikheel.works
-botName=intrvwbt
-projectPrefix=intrvwbt
+botSubDomain=itrvwbt.nikheel.works
+botName=itrvwbt
+projectPrefix=itrvwbt
 azureLocation=eastus
-acrName=intrvwbtacr
+acrName=itrvwbtacr
 
