@@ -1,6 +1,6 @@
-botSubDomain=itrvwbt.nikheel.works
-botName=itrvwbt
-projectPrefix=itrvwbt
-azureLocation=eastus
-acrName=itrvwbtacr
+botSubDomain=probtnk.nikheel.works
+botName=probtnk
+projectPrefix=probtnk
+azureLocation=centralindia
+acrName=probtnkacr
 

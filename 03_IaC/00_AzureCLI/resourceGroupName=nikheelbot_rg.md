@@ -1,14 +1,14 @@
-resourceGroupName=intrvwbot_rg
-AKSmgResourceGroup=MC_intrvwbot_rg_recBotAKSCluster_eastus
-botSubDomain=intrvwbot.nikheel.works
+resourceGroupName=itrvwbt_rg
+AKSmgResourceGroup=MC_itrvwbt_rg_recBotAKSCluster_eastus
+botSubDomain=itrvwbt.nikheel.works
 azureLocation=eastus
-projectPrefix=intrvwbot
+projectPrefix=itrvwbt
 AKSClusterName="recBotAKSCluster"
 SP_ID=0a97ed60-9d08-4331-97c9-f1cbf7bf78aa
 SP_SECRET=_Vl8Q~9l8IXOUSmHFiRJ_RtiE.ZSjJRIZ2NVjaal
 appInsightsKey="8732cb22-7438-481f-91f0-0bcca6c94f7a"
 publicIpName="myRecBotPublicIP"
-acrName=intrvwbotacr
+acrName=itrvwbtacr
 set +H
 PASSWORD_WIN="AbcABC123!@#123456"
 
