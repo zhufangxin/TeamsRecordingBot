@@ -5,7 +5,7 @@ metadata:
 spec:
   acme:
     server: https://acme-staging-02.api.letsencrypt.org/directory
-    email: nikheeljain@outlook.com
+    email: Nikheel.Jain@shl.com
     privateKeySecretRef:
       name: letsencrypt
     solvers:

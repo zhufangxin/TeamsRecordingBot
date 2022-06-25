@@ -1,6 +1,6 @@
-botSubDomain=probtnk.nikheel.works
-botName=probtnk
-projectPrefix=probtnk
-azureLocation=centralindia
-acrName=probtnkacr
+botSubDomain=mybotint.nikheel.works
+botName=mybotint
+projectPrefix=mybotint
+azureLocation=centralus
+acrName=mybotintacr
 
