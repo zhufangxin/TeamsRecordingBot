@@ -1,6 +1,6 @@
-botSubDomain=mybotint.nikheel.works
-botName=mybotint
-projectPrefix=mybotint
+botSubDomain=mybotnkj.nikheel.works
+botName=mybotnkj
+projectPrefix=mybotnkj
 azureLocation=centralus
-acrName=mybotintacr
+acrName=mybotnkjacr
 

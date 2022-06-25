@@ -1,14 +1,16 @@
-resourceGroupName=itrvwbt_rg
-AKSmgResourceGroup=MC_itrvwbt_rg_recBotAKSCluster_eastus
-botSubDomain=itrvwbt.nikheel.works
-azureLocation=eastus
-projectPrefix=itrvwbt
+resourceGroupName=mybotint_rg
+AKSmgResourceGroup=MC_mybotint_rg_recBotAKSCluster_centralus
+botSubDomain=mybotint.nikheel.works
+azureLocation=centralus
+projectPrefix=mybotint
 AKSClusterName="recBotAKSCluster"
 SP_ID=0a97ed60-9d08-4331-97c9-f1cbf7bf78aa
 SP_SECRET=_Vl8Q~9l8IXOUSmHFiRJ_RtiE.ZSjJRIZ2NVjaal
 appInsightsKey="8732cb22-7438-481f-91f0-0bcca6c94f7a"
 publicIpName="myRecBotPublicIP"
-acrName=itrvwbtacr
+acrName=mybotintacr
+publicIpAddressId="20.80.75.111"
+az aks get-credentials --resource-group $resourceGroupName --name $AKSClusterName
 set +H
 PASSWORD_WIN="AbcABC123!@#123456"
 
