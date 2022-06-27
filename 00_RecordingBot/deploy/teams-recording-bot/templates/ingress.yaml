@@ -26,10 +26,10 @@ spec:
   - host: {{ include "hostName" . }}
     http:
       paths:
-      - backend:
+      - path: /
+        pathType: Prefix
+        backend:
           service:
             name: {{ $fullName }}-routing
             port:
               number: 443
-        path: /
-        pathType: Prefix

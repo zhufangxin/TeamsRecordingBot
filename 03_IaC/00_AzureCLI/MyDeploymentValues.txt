@@ -1,6 +1,6 @@
-botSubDomain=rjbotin.nikheel.works
-botName=rjbotin
-projectPrefix=rjbotin
+botSubDomain=jbdiabt.nikheel.works
+botName=jbdiabt
+projectPrefix=jbdiabt
 azureLocation=centralus
-acrName=rjbotinjacr
+acrName=jbdiabtacr
 

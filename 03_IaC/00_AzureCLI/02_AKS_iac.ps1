@@ -103,7 +103,8 @@ helm install nginx-ingress ingress-nginx/ingress-nginx --create-namespace --name
 
 # Setup AKS namespace for teams-recording-bot
 Write-Output "Creating teams-recording-bot namespace and bot secret that holds BOT_ID, BOT_SECRET, BOT_NAME, Cognitive Service Key and Middleware End Point"
-Write-Output "Botname is: $env:botName and Persistance end point is: $env:persistenceEndPoint, Application Insights Key is: $appInsightsKey"
+Write-Output "Botname is: $env:botName and Persistance end point is: $env:persistenceEndPoint, Application Insights Key is: $appInsightsKey    and applicationId=$env:BOT_ID --from-literal=applicationSecret=$env:BOT_SECRET --from-literal=botName=$env:botName --from-literal=azureCognitiveKey=$env:azureCognitiveKey --from-literal=persistenceEndPoint=$env:persistenceEndPoint --from-literal=azureCognitiveRegion=$azureLocation --from-literal=appInsightsKey=$appInsightsKey"
+
 kubectl create ns teams-recording-bot
 kubectl create secret generic bot-application-secrets --namespace teams-recording-bot --from-literal=applicationId=$env:BOT_ID --from-literal=applicationSecret=$env:BOT_SECRET --from-literal=botName=$env:botName --from-literal=azureCognitiveKey=$env:azureCognitiveKey --from-literal=persistenceEndPoint=$env:persistenceEndPoint --from-literal=azureCognitiveRegion=$azureLocation --from-literal=appInsightsKey=$appInsightsKey
 
@@ -116,7 +117,7 @@ helm install teams-recording-bot 00_RecordingBot/deploy/teams-recording-bot --na
 # Validate certificate, wait a minute or two
 # Write-Output "Sleeping for 5 mins before running validation."
 Start-Sleep -Seconds 300
-
+kubectl get cert -n teams-recording-bot
 $certValidation = kubectl get cert -n teams-recording-bot
 
 if ($certValidation -like '*True*')
