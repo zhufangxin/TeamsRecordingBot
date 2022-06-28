@@ -1,15 +1,15 @@
-resourceGroupName=rjbotin_rg
-AKSmgResourceGroup=MC_rjbotin_rg_recBotAKSCluster_centralus
-botSubDomain=rjbotin.nikheel.works
+resourceGroupName=jbdiabt_rg
+AKSmgResourceGroup=MC_jbdiabt_rg_recBotAKSCluster_centralus
+botSubDomain=jbdiabt.nikheel.works
 azureLocation=centralus
-projectPrefix=rjbotin
+projectPrefix=jbdiabt
 AKSClusterName="recBotAKSCluster"
 SP_ID=0a97ed60-9d08-4331-97c9-f1cbf7bf78aa
 SP_SECRET=_Vl8Q~9l8IXOUSmHFiRJ_RtiE.ZSjJRIZ2NVjaal
 appInsightsKey="6cae6481-7960-4c0a-9602-33e91532b428"
 publicIpName="myRecBotPublicIP"
-acrName=rjbotinacr
-publicIpAddressId="20.118.234.111"
+acrName=jbdiabtacr
+publicIpAddressId="20.83.50.114"
 az aks get-credentials --resource-group $resourceGroupName --name $AKSClusterName
 set +H
 PASSWORD_WIN="AbcABC123!@#123456"
