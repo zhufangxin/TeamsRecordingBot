@@ -59,7 +59,7 @@ spec:
         - containerPort: {{ .Values.container.port }}
         - containerPort: {{ .Values.internal.media }}
         volumeMounts:
-        - mountPath: "C:\\certs\\"
+        - mountPath: "C:/certs/"
           name: certificate
           readOnly: true
         env:
