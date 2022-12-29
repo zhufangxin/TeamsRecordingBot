@@ -1,6 +1,6 @@
-botSubDomain=jbdiabtn.nikheel.works
-botName=jbdiabtn
-projectPrefix=jbdiabtn
-azureLocation=centralus
-acrName=jbdiabtnacr
+botSubDomain=compliance.rec.test
+botName=handshake-compliance-recording-bot
+projectPrefix=compliancerectest
+azureLocation=japaneast
+acrName=compliancerecacr
 
